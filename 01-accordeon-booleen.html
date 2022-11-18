@@ -5,8 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon avec des booléens</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body>
     <h1>Accordéon avec des booléens</h1>
+    <div class="accordeon" x-data="{open: false }">
+      <section>
+        <button @click="open = ! open">bouton 1</button>
+        <span x-show="open" x-transition>
+            Coucou 👋
+        </span>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, consequatur? Eum quis unde illum reprehenderit repellendus neque aut voluptate rerum adipisci atque, assumenda rem minus enim nisi et molestiae corrupti.</p>
+      </section>
+    </div>
+    <div class="accordeon" x-data="{open: false }">
+      <section>
+        <button @click="open = ! open">bouton 2</button>
+        <span x-show="open" x-transition>
+            Je m'appelle Gaspard.
+        </span>
+        <p>Distinctio culpa est eos, repellendus libero itaque doloremque nesciunt accusantium voluptates corrupti laboriosam corporis necessitatibus. Deleniti magni ipsam sunt voluptatibus illum aspernatur amet, deserunt nostrum fugit! Eveniet deleniti quibusdam quas.</p>
+      </section>
+    </div>
+
+
+    <div class="accordeon" x-data="{open: false }">
+      <section>
+        <button @click="open = ! open">bouton 3</button>
+        <span x-show="open" x-transition>
+          Je suis étudiant au BUT MMI de montbéliard.
+        </span>
+        <p>Voluptate quaerat voluptatum rem eum molestias quas, quo facilis consectetur earum? Repellat, iure. Provident repellat ad blanditiis fugiat, sequi incidunt distinctio aliquam natus hic, dolores nobis unde, consequatur illum voluptatibus.</p>
+      </section>
+    </div>
   </body>
 </html>
