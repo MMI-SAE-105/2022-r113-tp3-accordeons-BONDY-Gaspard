@@ -6,8 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon avec x-collapse</title>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body>
     <h1>Accordéon avec <code>x-collapse</code></h1>
+    <div class="accordeon" x-data="{expanded: false }">
+      <section>
+        <button @click="expanded = ! expanded">Toogle for content</button>
+        <p x-show="expanded" x-collapse>
+          Distinctio culpa est eos, repellendus libero itaque doloremque nesciunt accusantium voluptates corrupti laboriosam corporis necessitatibus. Deleniti magni ipsam sunt voluptatibus illum aspernatur amet, deserunt nostrum fugit! Eveniet deleniti quibusdam quas.
+        </p>
+      </section>
+    </div>
   </body>
 </html>
